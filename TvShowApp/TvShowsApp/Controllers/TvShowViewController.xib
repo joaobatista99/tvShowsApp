@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TvShowViewController" customModule="TvApp" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollView" destination="87y-mq-oFR" id="cVb-yO-Odq"/>
+                <outlet property="tvShowAirDaysLabel" destination="zbP-N7-Zcv" id="w5y-rW-SQb"/>
+                <outlet property="tvShowAirTimeLabel" destination="E6Z-tC-mJ8" id="UHH-gY-4Nl"/>
+                <outlet property="tvShowEpisodesTableView" destination="33c-pi-bpy" id="IkN-Fh-utN"/>
+                <outlet property="tvShowGenreLabel" destination="ozX-Dx-fmV" id="wYw-ad-wTE"/>
+                <outlet property="tvShowNameLabel" destination="b6i-dw-FwW" id="lGx-Vx-w23"/>
+                <outlet property="tvShowPosterImage" destination="nGa-7m-w46" id="OIX-Cd-8HQ"/>
+                <outlet property="tvShowSummaryLabel" destination="lgK-dc-NPh" id="Kfl-8Z-jia"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87y-mq-oFR">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwn-8d-0Oq">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="880.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nGa-7m-w46">
+                                    <rect key="frame" x="96" y="8" width="128" height="170.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="nGa-7m-w46" secondAttribute="height" multiplier="3:4" id="gge-KN-MwO"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="iOc-ND-l2j">
+                                    <rect key="frame" x="8" y="190.5" width="304" height="247.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6i-dw-FwW">
+                                            <rect key="frame" x="0.0" y="0.0" width="304" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-Dx-fmV">
+                                            <rect key="frame" x="0.0" y="30.5" width="304" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, Tue, Wed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-N7-Zcv">
+                                            <rect key="frame" x="0.0" y="51.5" width="304" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="19h30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6Z-tC-mJ8">
+                                            <rect key="frame" x="0.0" y="70.5" width="304" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgK-dc-NPh">
+                                            <rect key="frame" x="0.0" y="89.5" width="304" height="158"/>
+                                            <string key="text">&lt;p&gt;&lt;b&gt;Married... with Children&lt;/b&gt; follows the lives of Al Bundy, a once glorious high school football player turned hard-luck women's shoe salesman; his obnoxious wife, Peggy; their attractive, promiscuous, and clueless daughter, Kelly; and their girl-crazy, wisecracking son, Bud. Their neighbors are the upwardly-mobile Steve Rhoades and his feminist wife Marcy, who later gets remarried to Jefferson D'Arcy, a white-collar criminal who becomes her \"trophy husband\" and Al's sidekick.&lt;/p&gt;"asdasdasdasdasdasda</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwA-mv-DD9">
+                                    <rect key="frame" x="8" y="452" width="72.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="33c-pi-bpy">
+                                    <rect key="frame" x="0.0" y="480.5" width="320" height="400"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="400" id="S69-o3-bCl"/>
+                                    </constraints>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="nGa-7m-w46" firstAttribute="top" secondItem="Jwn-8d-0Oq" secondAttribute="top" constant="8" id="1hv-Q5-QL3"/>
+                                <constraint firstAttribute="trailing" secondItem="iOc-ND-l2j" secondAttribute="trailing" constant="8" id="7yT-VZ-aVy"/>
+                                <constraint firstItem="IwA-mv-DD9" firstAttribute="leading" secondItem="Jwn-8d-0Oq" secondAttribute="leading" constant="8" id="AFT-oO-ddx"/>
+                                <constraint firstAttribute="trailing" secondItem="33c-pi-bpy" secondAttribute="trailing" id="EIg-LB-REN"/>
+                                <constraint firstItem="IwA-mv-DD9" firstAttribute="top" secondItem="iOc-ND-l2j" secondAttribute="bottom" constant="14" id="Eyu-ru-7hs"/>
+                                <constraint firstItem="33c-pi-bpy" firstAttribute="leading" secondItem="Jwn-8d-0Oq" secondAttribute="leading" id="FDq-sF-pW7"/>
+                                <constraint firstAttribute="bottom" secondItem="33c-pi-bpy" secondAttribute="bottom" id="M7w-mk-m1Y"/>
+                                <constraint firstItem="iOc-ND-l2j" firstAttribute="top" secondItem="nGa-7m-w46" secondAttribute="bottom" constant="12" id="WCE-Kk-Ego"/>
+                                <constraint firstItem="33c-pi-bpy" firstAttribute="top" secondItem="IwA-mv-DD9" secondAttribute="bottom" constant="8" id="kwU-xk-Dy3"/>
+                                <constraint firstItem="nGa-7m-w46" firstAttribute="centerX" secondItem="Jwn-8d-0Oq" secondAttribute="centerX" id="sZN-Pb-il5"/>
+                                <constraint firstItem="iOc-ND-l2j" firstAttribute="leading" secondItem="Jwn-8d-0Oq" secondAttribute="leading" constant="8" id="yZm-ir-8WX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Jwn-8d-0Oq" firstAttribute="top" secondItem="OpV-1O-3Fs" secondAttribute="top" id="B4V-Uj-Ozq"/>
+                        <constraint firstItem="Jwn-8d-0Oq" firstAttribute="width" secondItem="Xqo-dd-jw3" secondAttribute="width" id="MaD-b9-lfG"/>
+                        <constraint firstItem="Jwn-8d-0Oq" firstAttribute="bottom" secondItem="OpV-1O-3Fs" secondAttribute="bottom" id="TX7-tM-T8U"/>
+                        <constraint firstItem="Jwn-8d-0Oq" firstAttribute="leading" secondItem="OpV-1O-3Fs" secondAttribute="leading" id="ifS-mR-rdW"/>
+                        <constraint firstItem="Jwn-8d-0Oq" firstAttribute="trailing" secondItem="OpV-1O-3Fs" secondAttribute="trailing" id="vxS-dK-DZM"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="OpV-1O-3Fs"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Xqo-dd-jw3"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="87y-mq-oFR" secondAttribute="trailing" id="P95-Rq-ycg"/>
+                <constraint firstItem="nGa-7m-w46" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.3" id="YUZ-Gl-S5X"/>
+                <constraint firstItem="87y-mq-oFR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="idc-t7-7pD"/>
+                <constraint firstItem="87y-mq-oFR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qi1-XN-PHF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="87y-mq-oFR" secondAttribute="bottom" id="vug-9P-qde"/>
+            </constraints>
+            <point key="canvasLocation" x="-24.375" y="116.19718309859155"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
